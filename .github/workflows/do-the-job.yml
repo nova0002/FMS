@@ -20,10 +20,10 @@ jobs:
         with:
           mode: start
           github-token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
-          ec2-image-id: ami-0b0af3577fe5e3532
-          ec2-instance-type: m5a.large
+          ec2-image-id: ami-087c17d1fe0178315
+          ec2-instance-type: t2.micro
           subnet-id: subnet-02829d7b8c3522644
-          security-group-id: sg-0f78a1ee120af6542
+          security-group-id: sg-016e543200ed56a0f
        #   iam-role-name: arn:aws:iam::430073024411:user/fms_test
   do-the-job:
     name: Do the job on the runner
