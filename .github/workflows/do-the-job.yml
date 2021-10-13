@@ -20,10 +20,10 @@ jobs:
         with:
           mode: start
           github-token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
-          ec2-image-id: ami-087c17d1fe0178315
+          ec2-image-id: ami-0b0af3577fe5e3532
           ec2-instance-type: t2.micro
           subnet-id: subnet-02829d7b8c3522644
-          security-group-id: sg-016e543200ed56a0f
+          security-group-id: sg-0a14a870f72a2da89
        #   iam-role-name: arn:aws:iam::430073024411:user/fms_test
   do-the-job:
     name: Do the job on the runner
@@ -31,8 +31,8 @@ jobs:
     runs-on: ${{ needs.start-runner.outputs.label }} # run the job on the newly created runner
     steps:
       - name: Clone FMS
-        run: git clone https://github.com/NOAA-GFDL/FMS.git
-        # run: echo 'Hello MDTF!'
+       # run: git clone https://github.com/NOAA-GFDL/FMS.git
+        run: echo 'Hello MDTF!'
   stop-runner:
     name: Stop self-hosted EC2 runner
     needs:
