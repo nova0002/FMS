@@ -34,7 +34,7 @@ jobs:
     runs-on: ${{ needs.start-runner.outputs.label }} # run the job on the newly created runner
     steps:
       - name: Install git
-        run: sudo yum install git -y
+        run: sudo yum install -y git 
       - name: Clone FMS
         run: git clone https://github.com/NOAA-GFDL/FMS.git
   stop-runner:
