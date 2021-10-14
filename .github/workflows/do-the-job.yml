@@ -20,13 +20,13 @@ jobs:
         with:
           mode: start
           github-token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
-          #ec2-image-id: ami-092a9e946def5be32
-          ec2-image-id: ami-0b0af3577fe5e3532
+          ec2-image-id: ami-092a9e946def5be32
+          #ec2-image-id: ami-0b0af3577fe5e3532
           ec2-instance-type: t2.micro
-          subnet-id: subnet-02829d7b8c3522644
-          security-group-id: sg-0a14a870f72a2da89
-          #subnet-id: subnet-003faaf9f1e386979
-          #security-group-id: sg-05735797b251348e2
+          #subnet-id: subnet-02829d7b8c3522644
+          #security-group-id: sg-0a14a870f72a2da89
+          subnet-id: subnet-003faaf9f1e386979
+          security-group-id: sg-05735797b251348e2
        ##   iam-role-name: arn:aws:iam::430073024411:user/fms_test
   do-the-job:
     name: Do the job on the runner
