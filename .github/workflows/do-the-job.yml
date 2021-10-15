@@ -34,7 +34,7 @@ jobs:
     runs-on: ${{ needs.start-runner.outputs.label }} # run the job on the newly created runner
     steps:
       - name: Install packages 
-        run:  sudo yum install -y git autoconf automake
+        run:  sudo yum install -y git autoconf automake autogen libtool
       - name: Clone FMS
         run: git clone https://github.com/NOAA-GFDL/FMS.git
       - name: Enter FMS 
