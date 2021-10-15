@@ -37,8 +37,10 @@ jobs:
         run:  sudo yum install -y git autoconf automake
       - name: Clone FMS
         run: git clone https://github.com/NOAA-GFDL/FMS.git
-    #  - name: Autoreconf
-   #     run: autoreconf -i 
+      - name: Enter FMS 
+        run: cd FMS
+      - name: Autoreconf
+        run: autoreconf -i 
   stop-runner:
     name: Stop self-hosted EC2 runner
     needs:
